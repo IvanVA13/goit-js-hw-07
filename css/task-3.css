@@ -1,0 +1,23 @@
+ul {
+  display: flex;
+  flex-wrap: wrap;
+
+  list-style: none;
+}
+
+li {
+  width: calc(100% / 3 - 60px);
+  height: 400px;
+}
+
+li:not(:last-child) {
+  margin-right: 30px;
+}
+
+img {
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  object-fit: cover;
+}
