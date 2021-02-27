@@ -1,12 +1,9 @@
 const arrItems = document.querySelectorAll(".item")
-const sumListCategoris = (arrItems) => console.log(`В списке ${arrItems.length} категории.`)
-const logCategoryTitleAndQuantityItems = (arrItems) => {
-    for (let i = 0; i < arrItems.length; i += 1) {
-        console.log(`Категория: ${arrItems[i].querySelector("h2").textContent}`);
-        console.log(`Количество элементов: ${arrItems[i].querySelectorAll("li.item > ul > li").length}`)
-    } 
-}
+const arrListCategoris = [...arrItems]
+console.log(`В списке ${arrListCategoris.length} категории.`)
 
-sumListCategoris(arrItems)
-logCategoryTitleAndQuantityItems(arrItems)
-
+const logCategoryTitleAndQuantityItems = arrListCategoris.map( (el) => {
+        console.log(`Категория: ${el.querySelector("h2").textContent}`);
+        console.log(`Количество элементов: ${el.querySelectorAll("li.item > ul > li").length}`)
+    }
+)

@@ -14,4 +14,5 @@ const createItemsInIngredients = (el) => {
 }
 
 const ingredientsEl = ingredients.map(createItemsInIngredients)
+console.log(ingredientsEl)
 document.querySelector("#ingredients").append(...ingredientsEl)
